@@ -36,6 +36,7 @@ fun NoteColor(){
                 ),
                 CircleShape
             )
+            .padding(4.dp)
     )
 }
 
