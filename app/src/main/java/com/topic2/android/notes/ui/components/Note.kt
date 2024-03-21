@@ -14,6 +14,20 @@ import com.topic2.android.notes.theme.rwGreen
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.graphics.Color
+
+@Composable
+fun NoteColor(){
+    Box(
+        modifier = Modifier.size(40.dp).background(Color.Red)
+    )
+}
+
+@Preview
+@Composable
+fun NoteColorPreview(){
+    NoteColor()
+}
 
 @Composable
 fun Note(){
