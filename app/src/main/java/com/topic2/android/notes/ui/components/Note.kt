@@ -49,7 +49,7 @@ fun NoteColor(
 @Preview
 @Composable
 fun NoteColorPreview(){
-    NoteColor()
+    NoteColor(color = Color.Red, size = 40.dp, padding = 4.dp, border = 2.dp)
 }
 
 @Composable
