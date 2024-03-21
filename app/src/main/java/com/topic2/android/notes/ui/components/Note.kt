@@ -28,29 +28,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.unit.Dp
 
-@Composable
-fun NoteColor(
-    color: Color,
-    size: Dp,
-    padding: Dp = 0.dp,
-    border: Dp
-){
-    Box(
-        modifier = Modifier
-            .size(40.dp)
-            .clip(CircleShape)
-            .background(Color.Red)
-            .border(
-                BorderStroke(
-                    2.dp,
-                    SolidColor(Color.Black)
 
-                ),
-                CircleShape
-            )
-            .padding(4.dp)
-    )
-}
 
 @Preview
 @Composable
@@ -69,6 +47,7 @@ fun Note(){
         .background(Color.White, backgroundShape)) {
         Row(modifier = Modifier.fillMaxSize()) {
             NoteColor(
+                modifier = Modifier.align(Alignment.CenterVertically),
                 color = rwGreen,
                 size = 40.dp,
                 padding = 4.dp,
