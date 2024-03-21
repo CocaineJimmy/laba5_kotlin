@@ -26,8 +26,10 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
-
+import androidx.compose.ui.unit.sp
 
 
 @Preview
@@ -58,8 +60,20 @@ fun Note(){
             Column(modifier = Modifier
                 .weight(1f)
                 .align(Alignment.CenterVertically)) {
-                Text(text = "Заголовок", maxLines = 1)
-                Text(text = "Содержание", maxLines = 1)
+                Text(text = "Заголовок", maxLines = 1,
+                    color = Color.Black,
+                    style = TextStyle(
+                        fontWeight = FontWeight.Normal,
+                        fontSize = 16.sp,
+                        letterSpacing = 0.15.sp)
+                )
+                Text(text = "Содержание", maxLines = 1,
+                    color = Color.Black.copy(alpha = 0.75f),
+                    style = TextStyle(
+                        fontWeight = FontWeight.Normal,
+                        fontSize = 14.sp,
+                        letterSpacing = 0.25.sp
+                    ))
             }
             Checkbox(
                 checked = false,
