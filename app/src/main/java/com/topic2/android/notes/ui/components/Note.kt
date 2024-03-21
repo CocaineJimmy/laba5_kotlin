@@ -20,9 +20,15 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.unit.Dp
 
 @Composable
-fun NoteColor(){
+fun NoteColor(
+    color: Color,
+    size: Dp,
+    padding: Dp = 0.dp,
+    border: Dp
+){
     Box(
         modifier = Modifier
             .size(40.dp)
