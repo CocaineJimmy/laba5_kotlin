@@ -56,19 +56,22 @@ fun NoteColorPreview(){
 fun Note(){
 
     Row(modifier = Modifier.fillMaxSize()) {
-        Box(
-            modifier = Modifier
-                .size(40.dp)
-                .background(rwGreen)
-        )
-        Column(modifier = Modifier.weight(1f)) {
-            Text(text = "Заголовок", maxLines = 1)
-            Text(text = "Содержание", maxLines = 1)
+        Row(modifier = Modifier.fillMaxSize()) {
+            NoteColor(
+                color = rwGreen,
+                size = 40.dp,
+                padding = 4.dp,
+                border = 1.dp
+            )
+            Column(modifier = Modifier.weight(1f)) {
+                Text(text = "Заголовок", maxLines = 1)
+                Text(text = "Содержание", maxLines = 1)
+            }
+            Checkbox(
+                checked = false, onCheckedChange = {},
+                modifier = Modifier.padding(start = 8.dp)
+            )
         }
-        Checkbox(
-            checked = false, onCheckedChange = {},
-            modifier = Modifier.padding(start = 8.dp)
-        )
     }
 }
 
